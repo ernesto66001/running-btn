@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1 style="color: white">ДАМИАН ПИДОР?</h1>
+    <button id="yes" style="color: white;cursor: pointer;padding: 10px 30px;border:none; background: blue;">>ДА</button>
+<button id="btn-run" style="color: white;cursor: pointer;padding: 10px 30px;border:none;">НЕТ</button>
+</div>
+
+<script>
+    const btn=document.querySelector('#btn-run')
+    btn.style.position='absolute'
+    function random(min,max){
+        const rand=min+Math.random()*(max-min+1)
+        return Math.floor(rand)
+    }
+    btn.addEventListener('mouseenter',()=>{
+        btn.style.background=`rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`
+        btn.style.left=`${random(0,90)}%`
+        btn.style.top=`${random(0,90)}%`
+    })
+const yes=document.querySelector('#yes')
+    yes.addEventListener('click',()=>{
+        alert('согл')
+    })
+</script>
+</body>
+</html>
